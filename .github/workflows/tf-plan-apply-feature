@@ -53,7 +53,7 @@ jobs:
     - name: Terraform Init
       working-directory: ./terraform/
       env:
-        GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS_TEST }}
       run: |
         terraform init
         terraform fmt -check
